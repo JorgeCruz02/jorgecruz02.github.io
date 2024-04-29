@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cuestionario: Recolección de información</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+        margin: 0;
+        padding: 0;
+    }
+
+    h1 {
+        text-align: center;
+        margin-top: 20px;
+        color: #333;
+    }
+
+    form {
+        max-width: 600px;
+        margin: 20px auto;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+    }
+
+    .pregunta {
+        margin-bottom: 20px;
+    }
+
+    label {
+        display: block;
+        margin-bottom: 5px;
+        color: #555;
+    }
+
+    input[type="text"],
+    select,
+    button,
+    input[type="radio"] {
+        width: 100%;
+        padding: 10px;
+        font-size: 16px;
+        border-radius: 4px;
+        border: 1px solid #ccc;
+        background-color: #fff;
+        box-sizing: border-box;
+        margin-top: 5px;
+    }
+
+    input[type="radio"] {
+        width: auto;
+        display: none; /* Ocultamos los radio buttons */
+    }
+
+    .radio-image {
+        display: inline-block;
+        margin-right: 10px;
+    }
+
+    .radio-image img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .radio-image label {
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        cursor: pointer;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        overflow: hidden;
+    }
+
+    .radio-image label:hover {
+        border-color: #4CAF50;
+    }
+
+    .radio-image input[type="radio"]:checked + label {
+        border-color: #4CAF50;
+    }
+
+    button[type="submit"] {
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        padding: 15px 20px;
+        font-size: 16px;
+        transition: background-color 0.3s ease;
+    }
+
+    button[type="submit"]:hover {
+        background-color: #45a049;
+    }
+
+</style>
+</head>
+<body>
+
+<h1>Cuestionario: Recolección de información</h1>
+
+<form id="cuestionarioForm">
+  
+  <div class="pregunta">
+    <label for="pregunta1">1.	¿Menciona que tipo de actividad física realizaste en el día? </label>
+    <select id="pregunta1" name="pregunta6">
+        <option value="caminar">Caminar</option>
+            <option value="correr">Correr</option>
+            <option value="bicicleta">Andar en bicicleta</option>
+            <option value="nadar">Nadar</option>
+            <option value="senderismo">Hacer senderismo</option>
+            <option value="fuerza">Entrenamiento de fuerza</option>
+            <option value="yoga">Yoga</option>
+            <option value="pilates">Pilates</option>
+            <option value="escalada">Escalada</option>
+            <option value="intervalos">Entrenamiento en intervalos</option>
+            <option value="eliptica">Entrenamiento elíptico</option>
+            <option value="remo">Remo</option>
+            <option value="cardio">Ejercicio cardiovascular</option>
+            <option value="baile">Baile</option>
+            <option value="funcional">Entrenamiento funcional</option>
+            <option value="cinta">Carrera en cinta</option>
+            <option value="boxeo">Entrenamiento de boxeo</option>
+            <option value="golf">Golf</option>
+            <option value="esqui">Esquí</option>
+            <option value="patinaje">Patinaje</option>
+      </select>
+</div>
+  
+  <div class="pregunta">
+    <label for="pregunta2">2.	¿A qué hora dormiste? </label>
+    <input type="time" id="hora_pregunta2" name="hora_pregunta2">
+  </div>
+  
+  <div class="pregunta">
+    <label for="pregunta3">3.	¿A qué hora te despertaste? </label>
+    <input type="time" id="hora_pregunta3" name="hora_pregunta2">
+  </div>
+  
+  <div class="pregunta">
+    <label>4.	¿Qué tan estresado te sentiste hoy? (1-5 donde 5 es muy estresado). </label><br>
+    <div class="radio-image">
+        <input type="radio" id="opcion1" name="pregunta4" value="opcion1">
+        <label for="opcion1"><img src="image1.png" alt="Opción 1"></label>
+    </div>
+    <div class="radio-image">
+        <input type="radio" id="opcion2" name="pregunta4" value="opcion2">
+        <label for="opcion2"><img src="image2.png" alt="Opción 2"></label>
+    </div>
+    <div class="radio-image">
+        <input type="radio" id="opcion3" name="pregunta4" value="opcion3">
+        <label for="opcion3"><img src="image3.png" alt="Opción 3"></label>
+    </div>
+    <div class="radio-image">
+        <input type="radio" id="opcion4" name="pregunta4" value="opcion4">
+        <label for="opcion4"><img src="image4.png" alt="Opción 4"></label>
+    </div>
+    <div class="radio-image">
+        <input type="radio" id="opcion5" name="pregunta4" value="opcion5">
+        <label for="opcion5"><img src="image5.png" alt="Opción 5"></label>
+    </div>
+  </div>
+  
+  <div class="pregunta">
+    <label for="pregunta5">5.	¿Cuántas veces te despertaste en la noche? </label>
+    <select id="pregunta5" name="pregunta5">
+        <option value="opcion1">0 veces</option>
+        <option value="opcion2">1 a 2 veces</option>
+        <option value="opcion3">3 a 4 veces</option>
+        <option value="opcion4">5 o más veces</option>
+    </select>
+  </div>
+  
+  <div class="pregunta">
+    <label for="pregunta6">6.	¿Cuántas veces te quitaste el wearable durante el día? </label>
+    <select id="pregunta6" name="pregunta6">
+      <option value="opcion1">0 veces</option>
+      <option value="opcion2">1 a 2 veces</option>
+      <option value="opcion3">3 a 4 veces</option>
+      <option value="opcion4">5 o más veces</option>
+    </select>
+  </div>
+  
+  <div class="pregunta">
+    <label for="pregunta7">7.	¿Cuánto tiempo hiciste ejercicio?</label>
+    <select id="pregunta7" name="pregunta7">
+      <option value="opcion1">Nada</option>
+      <option value="opcion2">De 1 a 30 minutos</option>
+      <option value="opcion3">De 30 minutos a 1 hora</option>
+      <option value="opcion4">Más de 1 hora</option>
+    </select>
+  </div>
+  
+  <div class="pregunta">
+    <label for="pregunta8">8.	¿En que momento del día hiciste ejercicio?</label>
+    <select id="pregunta8" name="pregunta7">
+      <option value="opcion1">En la mañana</option>
+      <option value="opcion2">En la tarde</option>
+      <option value="opcion3">En la noche</option>
+    </select>
+  </div>
+
+  <button type="submit">Enviar respuestas</button>
+</form>
+
+</body>
+</html>
